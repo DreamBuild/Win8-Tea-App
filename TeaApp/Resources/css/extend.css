@@ -1,0 +1,14 @@
+﻿img {
+    float: right;
+}
+
+p {
+    text-indent: 2em;
+}
+body {
+    background-color: transparent;
+    color:cyan;
+    font-size:18px;
+    padding-right:18px;
+    text-align:left;
+}

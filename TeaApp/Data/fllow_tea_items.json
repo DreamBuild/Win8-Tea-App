@@ -1,0 +1,26 @@
+﻿[
+  {"title":"茶字流变史","image_path":"Images/followtea/main1.jpg",
+  "detail":[
+	  {"name":"荼","content":"Data/FollowTea/茶字流变史/荼.html"},
+	  {"name":"槚","content":"Data/FollowTea/茶字流变史/槚.html"},
+	  {"name":"茗","content":"Data/FollowTea/茶字流变史/茗.html"},
+	  {"name":"荈","content":"Data/FollowTea/茶字流变史/荈.html"},
+	  {"name":"设","content":"Data/FollowTea/茶字流变史/设.html"},
+	  {"name":"茶","content":"Data/FollowTea/茶字流变史/茶.html"}
+]},
+  {"title":"茶文化形成简史","image_path":"Images/followtea/main2.jpg",
+    "detail":[
+	  {"name":"三国以前的茶文化启蒙","content":"Data/FollowTea/茶文化形成简史/三国.html"},
+	  {"name":"晋代、南北朝茶文化的萌芽","content":"Data/FollowTea/茶文化形成简史/晋代.html"},
+	  {"name":"唐代茶文化的形成","content":"Data/FollowTea/茶文化形成简史/唐代.html"},
+	  {"name":"宋代茶文化的兴盛","content":"Data/FollowTea/茶文化形成简史/宋代.html"},
+	  {"name":"明、清茶文化的普及","content":"Data/FollowTea/茶文化形成简史/明清.html"},
+	  {"name":"现代茶文化的发展","content":"Data/FollowTea/茶文化形成简史/现代.html"}
+]},
+  {"title":"茶的传播","image_path":"Images/followtea/main3.jpg",
+  "detail":[
+	  {"name":"简介","content":"Data/FollowTea/茶的传播/简介.html"},
+	  {"name":"国内","content":"Data/FollowTea/茶的传播/国内.html"},
+	  {"name":"国外","content":"Data/FollowTea/茶的传播/国外.html"}
+]}
+]

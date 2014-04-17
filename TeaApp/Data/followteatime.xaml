@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeaApp.Data">
+    <Paragraph x:Key="p">
+        <Run Foreground="White">
+            this is my content.
+        </Run>
+        <InlineUIContainer>
+            <Image Source="ms-appx:///Images/homepage/main1.jpg" Height="200" Width="200"/>
+        </InlineUIContainer>
+        <Bold>中华人名共和国</Bold>
+    </Paragraph>
+</ResourceDictionary>

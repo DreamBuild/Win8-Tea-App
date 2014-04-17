@@ -1,0 +1,12 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeaApp.Data.FollowTea">
+    
+    <Paragraph x:Key="taste_description" FontSize="15">
+        <Run>
+            茶道是以修行悟道为宗旨的饮茶艺术，是饮茶之道和饮茶修道的统一。茶道包括茶艺、茶礼、茶境、修道四大要素。所谓茶艺是指备器、选水、取火、候汤、习茶的一套技艺；
+            所谓茶礼，是指茶事活动中的礼仪、法则；所谓茶境，是指茶事活动的场所、环境、所谓修道，是指通过茶事活动来怡情修性、悟道体道。
+        </Run>
+    </Paragraph>
+</ResourceDictionary>
