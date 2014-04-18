@@ -154,4 +154,4 @@ D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\bin\Debug\Resou
 D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.g.i.cs
 D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.g.cs
 D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.xaml
-D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.xbf
+D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\ListViewItemStyle.xbf

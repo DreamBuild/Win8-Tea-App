@@ -299,6 +299,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style BasedOn="{StaticResource ListViewStyle}" x:Key="CenterListViewItem" TargetType="ListViewItem">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
     
     <DataTemplate x:Key="ListViewItemDataTempldate">
         <Grid>
