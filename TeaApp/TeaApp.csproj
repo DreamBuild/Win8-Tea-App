@@ -191,6 +191,7 @@
     <Content Include="Images\followtea\main2.jpg" />
     <Content Include="Images\followtea\main3.jpg" />
     <Content Include="Images\interacttea\pin.png" />
+    <Content Include="Images\interacttea\shuo.png" />
     <Content Include="Images\map.png" />
     <Content Include="Images\taste\dian1.jpg" />
     <Content Include="Images\taste\mian.jpg" />
