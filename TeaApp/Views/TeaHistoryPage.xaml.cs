@@ -66,6 +66,13 @@ namespace TeaApp.Views
         /// 的字典。 首次访问页面时，该状态将为 null。</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            List<String> list = new List<string>();
+            list.Add("hello");
+            list.Add("world");
+            list.Add("花茶");
+            list.Add("绿茶");
+
+            this.DefaultViewModel["Items"] = list;
         }
 
         /// <summary>

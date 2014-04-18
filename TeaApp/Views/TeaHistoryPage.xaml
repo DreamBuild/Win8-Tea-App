@@ -13,8 +13,18 @@
     <Page.Resources>
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">My Application</x:String>
-    </Page.Resources>
 
+        <DataTemplate x:Key="DataTemplate">
+            <Grid Margin="0" Height="80" Width="200">
+                <Rectangle Grid.Row="0" Height="1" Stroke="#FFF300FF" VerticalAlignment="Center" Width="300"/>
+                <Ellipse Grid.Row="0" Height="80" Width="80" Fill="LawnGreen" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding}"/>
+            </Grid>
+        </DataTemplate>
+
+    </Page.Resources>
+    
+   
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
@@ -30,12 +40,9 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <GridView Grid.Row="1">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    
-                </DataTemplate>
-            </GridView.ItemTemplate>
+        
+        <GridView Height="100" Grid.Row="1" ItemsSource="{Binding Items}" Margin="0" ItemTemplate="{StaticResource DataTemplate}" Padding="0" ItemsPanel="{StaticResource ItemsPanelTemplate}" Style="{StaticResource GridViewStyle}" ItemContainerStyle="{StaticResource GridViewItemStyle}">
+            
         </GridView>
         <!-- Back button and page title -->
         <Grid>

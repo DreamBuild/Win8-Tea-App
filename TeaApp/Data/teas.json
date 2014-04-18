@@ -1,9 +1,9 @@
 [
-	{"name":"简介","image":"Images/drinktea/icon.png","content":"Data/DrinkTea/简介.html"},
-	{"name":"绿茶","image":"Images/drinktea/icon.png","content":"Data/DrinkTea/绿茶.html"},
-	{"name":"红茶","image":"Images/drinktea/icon.png","content":"Data/DrinkTea/红茶.html"},
-	{"name":"花茶","image":"Images/drinktea/icon.png","content":"Data/DrinkTea/花茶.html"},
-	{"name":"水  ","image":"Images/drinktea/icon.png","content":"Data/DrinkTea/水.html"},
-	{"name":"茶具","image":"Images/drinktea/icon.png","content":"Data/DrinkTea/茶具.html"},
-	{"name":"健康","image":"Images/drinktea/icon.png","content":"Data/DrinkTea/健康.html"}
+	{"name":"简介","image":"Images/drinktea/main.png","content":"Data/DrinkTea/简介.html"},
+	{"name":"绿茶","image":"Images/drinktea/greentea.png","content":"Data/DrinkTea/绿茶.html"},
+	{"name":"红茶","image":"Images/drinktea/black.png","content":"Data/DrinkTea/红茶.html"},
+	{"name":"花茶","image":"Images/drinktea/flowertea.png","content":"Data/DrinkTea/花茶.html"},
+	{"name":"水  ","image":"Images/drinktea/water.png","content":"Data/DrinkTea/水.html"},
+	{"name":"茶具","image":"Images/drinktea/set.png","content":"Data/DrinkTea/茶具.html"},
+	{"name":"健康","image":"Images/drinktea/health.png","content":"Data/DrinkTea/健康.html"}
 ]

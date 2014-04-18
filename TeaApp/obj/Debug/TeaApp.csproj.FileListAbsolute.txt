@@ -150,4 +150,8 @@ D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Views
 D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Views\TeaHistoryPage.g.cs
 D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Views\TeaHistoryPage.xaml
 D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Views\TeaHistoryPage.xbf
-D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\ListViewItemStyle.xbf
+D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\bin\Debug\Resources\GridViewStyle.xbf
+D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.g.i.cs
+D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.g.cs
+D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.xaml
+D:\Visual Studio 2013\Win8\TeaApp\Repository\Win8-Tea-App\TeaApp\obj\Debug\Resources\GridViewStyle.xbf

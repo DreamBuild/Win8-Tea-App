@@ -6,6 +6,7 @@ Assets\widelogo.scale-100.jpg
 App.xbf
 MainPage.xbf
 Resources\ButtonStyles.xbf
+Resources\GridViewStyle.xbf
 Resources\ListViewItemStyle.xbf
 Views\ChatRoomPage.xbf
 Views\DrinkTeaPage.xbf
@@ -47,7 +48,13 @@ Data\teas.json
 Images\back.jpg
 Images\backgound.jpg
 Images\background.jpg
-Images\drinktea\icon.png
+Images\drinktea\black.png
+Images\drinktea\flowertea.png
+Images\drinktea\greentea.png
+Images\drinktea\health.png
+Images\drinktea\main.png
+Images\drinktea\set.png
+Images\drinktea\water.png
 Images\followtea\main1.jpg
 Images\followtea\main2.jpg
 Images\followtea\main3.jpg

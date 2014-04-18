@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TeaApp.Views;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -76,7 +77,7 @@ namespace TeaApp
                 // 当未还原导航堆栈时，导航到第一页，
                 // 并通过将所需信息作为导航参数传入来配置
                 // 参数
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(TeaHistoryPage), e.Arguments);
             }
             // 确保当前窗口处于活动状态
             Window.Current.Activate();

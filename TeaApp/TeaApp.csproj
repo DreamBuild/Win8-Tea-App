@@ -180,7 +180,13 @@
     <Content Include="Data\FollowTea\茶的传播\国内.html" />
     <Content Include="Data\FollowTea\茶的传播\国外.html" />
     <Content Include="Data\FollowTea\茶的传播\简介.html" />
-    <Content Include="Images\drinktea\icon.png" />
+    <Content Include="Images\drinktea\black.png" />
+    <Content Include="Images\drinktea\flowertea.png" />
+    <Content Include="Images\drinktea\greentea.png" />
+    <Content Include="Images\drinktea\health.png" />
+    <Content Include="Images\drinktea\main.png" />
+    <Content Include="Images\drinktea\set.png" />
+    <Content Include="Images\drinktea\water.png" />
     <Content Include="Images\followtea\main1.jpg" />
     <Content Include="Images\followtea\main2.jpg" />
     <Content Include="Images\followtea\main3.jpg" />
@@ -236,6 +242,11 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\GridViewStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
