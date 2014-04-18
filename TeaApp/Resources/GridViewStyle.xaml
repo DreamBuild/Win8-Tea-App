@@ -75,6 +75,7 @@
                                         <ColorAnimation Duration="0" Storyboard.TargetName="Circle" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" To="Red" />
                                     </Storyboard>
                                 </VisualState>
+                                
                                 <!--鼠标按下时listview中item的效果-->
                                 <VisualState x:Name="PointerOverPressed">
                                     <Storyboard>
@@ -123,11 +124,9 @@
                                 </VisualState>
                                 <VisualState x:Name="Selected">
                                     <Storyboard>
-                                        <ColorAnimation Duration="0:0:1" Storyboard.TargetName="Circle" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" To="Blue" />
+                                        <DoubleAnimation Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity" To="1"/>
                                     </Storyboard>
-
                                 </VisualState>
-
                                 <VisualState x:Name="SelectedSwiping">
                                     <Storyboard>
 
@@ -235,7 +234,7 @@
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-
+                        <Border x:Name="OuterBorder" Opacity="0" BorderBrush="Yellow" BorderThickness="1" Grid.Row="0" Background="Wheat" />
                         <Rectangle x:Name="Line" Grid.Row="0" Height="2" VerticalAlignment="Center" Width="300" Stroke="#FF26FFBA">
                             <Rectangle.Fill>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

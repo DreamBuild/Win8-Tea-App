@@ -13,7 +13,7 @@
         <Setter Property="Margin" Value="0,0,0,0"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
@@ -303,7 +303,7 @@
     <Style BasedOn="{StaticResource ListViewStyle}" x:Key="CenterListViewItem" TargetType="ListViewItem">
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
     </Style>
-    
+
     <DataTemplate x:Key="ListViewItemDataTempldate">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -318,8 +318,239 @@
             </Ellipse>-->
 
             <TextBlock Text="{Binding Name}" Grid.Column="1" TextAlignment="Center" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            
+
         </Grid>
     </DataTemplate>
-    
+
+    <Style x:Key="HorizontalListView" TargetType="ListView">
+        
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ItemContainerStyle" >
+            <Setter.Value>
+                <Style TargetType="ListViewItem" BasedOn="{StaticResource CenterListViewItem}">
+                    <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                    <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+                    <!--<Setter Property="Background" Value="#FFFFFF" />-->
+                    <Setter Property="TabNavigation" Value="Local"/>
+                    <Setter Property="IsHoldingEnabled" Value="True"/>
+                    <!--修改每个Item间的间距，这边我是将原来默认的0，0，18，2改成了下面的0，0，18，20-->
+                    <Setter Property="Margin" Value="0,0,0,0"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Grid x:Name="OuterContainer">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Normal"/>
+                                            <!--鼠标移到listview的item的效果 -->
+                                            <VisualState x:Name="PointerOver">
+                                                <Storyboard>
+                                                    <DoubleAnimation Duration="0:0:1" Storyboard.TargetName="WidthTransform" Storyboard.TargetProperty="ScaleX" From="0" To="1"/>
+                                                    <ColorAnimation Duration="0:0:1" Storyboard.TargetName="Circle" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" To="DarkBlue"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
+                                                <Storyboard>
+                                                    <ColorAnimation Duration="0" Storyboard.TargetName="OuterContainer" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)" To="Red"/>
+                                                    <!--<DoubleAnimation Duration="0" Storyboard.TargetName="CircleSelected" Storyboard.TargetProperty="Opacity" To="1"/>-->
+                                                </Storyboard>
+                                            </VisualState>
+                                            <!--鼠标按下时listview中item的效果-->
+                                            <VisualState x:Name="PointerOverPressed">
+                                                <Storyboard>
+                                                    
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
+                                                <Storyboard>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="FocusStates">
+                                            <VisualState x:Name="Focused">
+                                                <Storyboard>
+                                                    <!--<DoubleAnimation Duration="0" Storyboard.TargetName="CircleSelected" Storyboard.TargetProperty="Opacity" To="1"/>-->
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Unfocused"/>
+                                            <VisualState x:Name="PointerFocused"/>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="SelectionHintStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.65" To="NoSelectionHint"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="VerticalSelectionHint">
+                                                <Storyboard>
+                                                   
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="HorizontalSelectionHint">
+                                                <Storyboard>
+                                                    
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="NoSelectionHint"/>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="SelectionStates">
+                                            <VisualState x:Name="UnselectedSwiping">
+                                                <Storyboard>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Selecting">
+                                                <Storyboard>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Selected">
+                                                <Storyboard>
+                                                    <!--<DoubleAnimation Duration="0" Storyboard.TargetName="CircleSelected" Storyboard.TargetProperty="Opacity" To="1"/>-->
+                                                </Storyboard>
+                                            </VisualState>
+
+                                            <VisualState x:Name="SelectedSwiping">
+                                                <Storyboard>
+                                                </Storyboard>
+                                            </VisualState>
+
+                                            <VisualState x:Name="Unselecting">
+                                                <Storyboard>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Unselected">
+                                                <Storyboard>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="SelectedUnfocused">
+                                                <Storyboard>
+                                                    <ColorAnimation Duration="0" Storyboard.TargetName="Circle" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" To="Blue"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="DragStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.2" To="NotDragging"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="NotDragging"/>
+                                            <VisualState x:Name="Dragging">
+                                                <Storyboard>
+                                                    <DoubleAnimation Duration="0" To="{StaticResource ListViewItemDragThemeOpacity}" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="InnerDragContent"/>
+                                                    <DragItemThemeAnimation TargetName="InnerDragContent"/>
+                                                    <FadeOutThemeAnimation TargetName="SelectedCheckMarkOuter"/>
+                                                    <FadeOutThemeAnimation TargetName="SelectedBorder"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="DraggingTarget">
+                                                <Storyboard>
+                                                    <DropTargetItemThemeAnimation TargetName="OuterContainer"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="MultipleDraggingPrimary">
+                                                <Storyboard>
+                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MultiArrangeOverlayBackground"/>
+                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MultiArrangeOverlayText"/>
+                                                    <DoubleAnimation Duration="0" To="{StaticResource ListViewItemDragThemeOpacity}" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentBorder"/>
+                                                    <FadeInThemeAnimation TargetName="MultiArrangeOverlayBackground"/>
+                                                    <FadeInThemeAnimation TargetName="MultiArrangeOverlayText"/>
+                                                    <DragItemThemeAnimation TargetName="ContentBorder"/>
+                                                    <FadeOutThemeAnimation TargetName="SelectionBackground"/>
+                                                    <FadeOutThemeAnimation TargetName="SelectedCheckMarkOuter"/>
+                                                    <FadeOutThemeAnimation TargetName="SelectedBorder"/>
+                                                    <FadeOutThemeAnimation TargetName="PointerOverBorder"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="MultipleDraggingSecondary">
+                                                <Storyboard>
+                                                    <FadeOutThemeAnimation TargetName="ContentContainer"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="ReorderHintStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.2" To="NoReorderHint"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="NoReorderHint"/>
+                                            <VisualState x:Name="BottomReorderHint">
+                                                <Storyboard>
+                                                    <DragOverThemeAnimation Direction="Bottom" ToOffset="{StaticResource ListViewItemReorderHintThemeOffset}" TargetName="ReorderHintContent"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="TopReorderHint">
+                                                <Storyboard>
+                                                    <DragOverThemeAnimation Direction="Top" ToOffset="{StaticResource ListViewItemReorderHintThemeOffset}" TargetName="ReorderHintContent"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="RightReorderHint">
+                                                <Storyboard>
+                                                    <DragOverThemeAnimation Direction="Right" ToOffset="{StaticResource ListViewItemReorderHintThemeOffset}" TargetName="ReorderHintContent"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="LeftReorderHint">
+                                                <Storyboard>
+                                                    <DragOverThemeAnimation Direction="Left" ToOffset="{StaticResource ListViewItemReorderHintThemeOffset}" TargetName="ReorderHintContent"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="DataVirtualizationStates">
+                                            <VisualState x:Name="DataAvailable"/>
+                                            <VisualState x:Name="DataPlaceholder">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="PlaceholderTextBlock">
+                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                            <DiscreteObjectKeyFrame.Value>
+                                                                <Visibility>Visible</Visibility>
+                                                            </DiscreteObjectKeyFrame.Value>
+                                                        </DiscreteObjectKeyFrame>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                    <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="PlaceholderRect">
+                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                            <DiscreteObjectKeyFrame.Value>
+                                                                <Visibility>Visible</Visibility>
+                                                            </DiscreteObjectKeyFrame.Value>
+                                                        </DiscreteObjectKeyFrame>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+
+                                    <Rectangle x:Name="Line" Grid.Row="0" Height="2" VerticalAlignment="Center" Width="{TemplateBinding Width}" MinWidth="200" Stroke="#FF26FFBA">
+                                        <Rectangle.RenderTransform>
+                                            <ScaleTransform x:Name="WidthTransform" />
+                                        </Rectangle.RenderTransform>
+                                        <Rectangle.Fill>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FF63FFF1" Offset="0"/>
+                                                <GradientStop Color="#FF62FDEF" Offset="1"/>
+                                                <GradientStop Color="#FF10D6C4" Offset="0.5"/>
+                                            </LinearGradientBrush>
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                    <Ellipse x:Name="Circle" Grid.Row="0" Height="60" Width="60" Fill="LawnGreen" HorizontalAlignment="Center" VerticalAlignment="Center" StrokeThickness="5">
+                                        <Ellipse.Stroke>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                                <GradientStop Offset="0" Color="Gray"/>
+                                                <GradientStop Offset="0.5" Color="White"/>
+                                                <GradientStop Offset="1" Color="Gray"/>
+                                            </LinearGradientBrush>
+                                        </Ellipse.Stroke>
+                                    </Ellipse>
+                                    
+                                    <ContentPresenter Grid.Row="0" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

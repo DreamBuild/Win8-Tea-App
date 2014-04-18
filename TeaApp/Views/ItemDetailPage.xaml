@@ -25,32 +25,34 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <!--
             TODO: 应将内容放入以下网格
                   以显示当前项的详细信息
         -->
         <Grid Grid.Row="1" x:Name="contentRegion">
-            <Grid.ColumnDefinitions>
+            <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <ListView  SelectionChanged="ListView_SelectionChanged" SelectionMode="Single" 
-                        ItemsSource="{Binding Items}" ItemContainerStyle="{StaticResource CenterListViewItem}"
+            </Grid.ColumnDefinitions>-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ListView  SelectionChanged="ListView_SelectionChanged" SelectionMode="Single" Style="{StaticResource HorizontalListView}"
+                       ItemsSource="{Binding Items}"
                        DisplayMemberPath="Name" Name="itemsList" Grid.Column="0" HorizontalAlignment="Center" 
                        MinWidth="200" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,30,0"
-                       Foreground="White" BorderThickness="0,0,1,0" BorderBrush="White" Loaded="itemsList_Loaded">
-                
-            </ListView>
+                       Foreground="White"  Loaded="itemsList_Loaded"/>
 
             <!--<RichEditBox IsReadOnly="True" Padding="0,0,10,0" Name="DescriptionBox" FontSize="20" Grid.Column="1" TextAlignment="Left" TextWrapping="Wrap" Margin="0,0,100,10" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Auto">
                 
             </RichEditBox>-->
+            <Border Grid.Row="1" BorderBrush="White" BorderThickness="1" Margin="10,0,10,0" CornerRadius="5">
+                <WebView Name="webView"  DefaultBackgroundColor="Transparent" >
 
-            <WebView Name="webView" Grid.Column="1" DefaultBackgroundColor="Transparent">
-
-            </WebView>
-
+                </WebView>
+            </Border>
         </Grid>
 
         <!-- 后退按钮和页标题-->

@@ -41,12 +41,12 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <GridView Height="100" Grid.Row="1" ItemsSource="{Binding Items}" Margin="0" 
+        <ListView Height="100" Grid.Row="1" ItemsSource="{Binding Items}" Margin="0" 
                    Padding="0" ItemTemplate="{StaticResource DataTemplate}"
-                  ItemsPanel="{StaticResource ItemsPanelTemplate}" Style="{StaticResource GridViewStyle}" 
-                  ItemContainerStyle="{StaticResource GridViewItemStyle}">
+                   Style="{StaticResource HorizontalListView}" 
+                  >
             
-        </GridView>
+        </ListView>
         <!-- Back button and page title -->
         <Grid>
             <Grid.ColumnDefinitions>
