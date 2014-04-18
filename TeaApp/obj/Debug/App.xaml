@@ -8,7 +8,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/ListViewItemStyle.xaml"/>
                 <ResourceDictionary Source="Resources/ButtonStyles.xaml"/>
-                <ResourceDictionary Source="Resources/GridViewStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

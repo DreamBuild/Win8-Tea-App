@@ -11,7 +11,7 @@
 
     <Grid Background="Black">
         
-        <GridView x:ConnectionId='1' Grid.Row="1" ItemsSource="{Binding Items}" Grid.Column="0" SelectionMode="None" VerticalAlignment="Center" HorizontalAlignment="Center"                                IsItemClickEnabled="True">
+        <GridView x:ConnectionId='0' Grid.Row="1" ItemsSource="{Binding Items}" Grid.Column="0" SelectionMode="None" VerticalAlignment="Center" HorizontalAlignment="Center"                                IsItemClickEnabled="True">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="20,0,20,0" MinHeight="600">
