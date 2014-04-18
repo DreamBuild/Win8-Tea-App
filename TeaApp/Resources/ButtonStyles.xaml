@@ -87,7 +87,7 @@
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Pressed">
-                                    <Storyboard>
+                                    <Storyboard>                                      
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="ArcShape">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedBackgroundThemeBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
