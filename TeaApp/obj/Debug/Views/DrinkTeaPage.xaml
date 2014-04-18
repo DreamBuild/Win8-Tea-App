@@ -35,11 +35,16 @@
                 <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ListView x:ConnectionId='1' ItemContainerStyle="{StaticResource ListViewStyle}"                                SelectionMode="Single" ItemsSource="{Binding Items}" DisplayMemberPath="Name" Name="teaList" Grid.Column="0" HorizontalAlignment="Center" MinWidth="200" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,30,0" Foreground="White" IsSynchronizedWithCurrentItem="False" BorderThickness="0,0,1,0" BorderBrush="White"/>
+            <ListView x:ConnectionId='1'                                               SelectionMode="Single" ItemTemplate="{StaticResource ListViewItemDataTempldate}"
+                       ItemContainerStyle="{StaticResource ListViewStyle}" ItemsSource="{Binding Items}" 
+                       Name="itemsList" Grid.Column="0" HorizontalAlignment="Center" MinWidth="200" 
+                       HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,30,0" 
+                       Foreground="White" BorderThickness="0,0,1,0" BorderBrush="White"                          />
 
-            <TextBlock Text="{Binding SelectedItem.Content,ElementName=teaList}" Name="DescriptionBox" FontSize="20" Grid.Column="1" TextAlignment="Left" TextWrapping="Wrap" Margin="0,0,100,0">
-               
-            </TextBlock>
+
+            <WebView Name="webView" Grid.Column="1" DefaultBackgroundColor="Transparent">
+
+            </WebView>
         </Grid>
 
         <!-- 后退按钮和页标题-->
@@ -54,7 +59,7 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock x:Name="pageTitle" Text="饮茶" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
     </Grid>

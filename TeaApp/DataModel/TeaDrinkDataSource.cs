@@ -44,6 +44,7 @@ namespace TeaApp.DataModel
                 obj = item.GetObject();
                 tea.Name = obj["name"].GetString();
                 tea.Content = obj["content"].GetString();
+                tea.SetImagePath(obj["image"].GetString());
 
                 this.Teas.Add(tea);
             }
