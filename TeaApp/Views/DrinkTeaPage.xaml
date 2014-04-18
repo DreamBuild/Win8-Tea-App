@@ -42,7 +42,7 @@
                        Foreground="White" BorderThickness="0,0,1,0" BorderBrush="White" Loaded="itemsList_Loaded"/>
 
 
-            <WebView Name="webView" Grid.Column="1" DefaultBackgroundColor="Transparent">
+            <WebView Name="webView"  Margin="50,0" Grid.Column="1" DefaultBackgroundColor="Transparent">
 
             </WebView>
         </Grid>
