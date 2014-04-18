@@ -64,7 +64,15 @@
         蔡襄、赵佶、朱权、钱椿年、顾元庆、屠隆、张谦德而外，丁谓、范仲淹、梅尧臣、欧阳修、林通、苏轼、黄庭坚、陆游等人对点茶艺都有所贡献。
         苏轼的《叶嘉传》，明写人，暗写茶，文中暗含点茶法。
         </Run>
+        <LineBreak/>
+        <InlineUIContainer>
+            <Image Height="220" Source="ms-appx:///Images/taste/dian1.jpg" Stretch="Fill"></Image>
+        </InlineUIContainer>
+        
     </Paragraph>
+    
+  
+
     <Paragraph x:Key="p3" FontSize="15" Margin="0,0,0,8" LineHeight="25">
         <Bold>
             <Run >（二）茶礼</Run>
