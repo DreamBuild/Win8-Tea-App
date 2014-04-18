@@ -28,6 +28,10 @@
         <Run>
             所谓修道，是指通过茶事活动来怡情修性、悟道体道。
         </Run>
+        <LineBreak/>
+        <InlineUIContainer>
+            <Image x:Name="interview" Source="ms-appx:///Images/followtea/main2.jpg"></Image>
+        </InlineUIContainer>
     </Paragraph>
   
     
