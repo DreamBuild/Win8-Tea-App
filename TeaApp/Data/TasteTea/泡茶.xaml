@@ -60,6 +60,7 @@
         </Bold>
         <LineBreak/>
         <Run>中国茶道注重自然，不拘礼法，茶书对此多有省略。</Run>
+        <LineBreak/>
         <InlineUIContainer>
             <Image x:Name="interview" Height="250" Source="ms-appx:///Images/taste/pao1.jpg" Stretch="Fill"></Image>
         </InlineUIContainer>
