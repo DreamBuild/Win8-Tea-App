@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="d:\visual studio 2013\win8\teaapp\teaapp\obj\debug\intermediatexaml\teaapp.exe" HashGuid="2335ad9e-199e-82cd-c40b-dc31960ab41b" />
+    <LocalAssembly PathName="d:\visual studio 2013\win8\teaapp\repository\win8-tea-app\teaapp\obj\debug\intermediatexaml\teaapp.exe" HashGuid="a48f931a-38c6-a50e-8373-67da91e5c021" />
     <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
   </ReferenceAssemblyList>

@@ -13,6 +13,7 @@ Views\FollowTeaPage.xbf
 Views\InteractTeaPage.xbf
 Views\ItemDetailPage.xbf
 Views\TasteTeaPage.xbf
+Views\TeaHistoryPage.xbf
 Data\DrinkTea\茶具.html
 Data\DrinkTea\红茶.html
 Data\DrinkTea\花茶.html
@@ -46,6 +47,7 @@ Data\teas.json
 Images\back.jpg
 Images\backgound.jpg
 Images\background.jpg
+Images\drinktea\icon.png
 Images\followtea\main1.jpg
 Images\followtea\main2.jpg
 Images\followtea\main3.jpg

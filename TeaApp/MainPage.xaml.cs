@@ -63,12 +63,13 @@ namespace TeaApp
             switch (item.Title)
             {
                 case "饮茶":
-                    List<DetailItem> items = await new TeaDrinkDataSource().GetTeaItemsSaync();
+                    //List<DetailItem> items = await new TeaDrinkDataSource().GetTeaItemsSaync();
 
-                    model.Items = items;
-                    model.Title = "饮茶";
-
-                    this.Frame.Navigate(typeof(ItemDetailPage), model);
+                    //model.Items = items;
+                    //model.Title = "饮茶";
+                    TeaDrinkDataSource dataSource = new TeaDrinkDataSource();
+                    List<DetailItem> items = await dataSource.GetTeaItemsSaync();
+                    this.Frame.Navigate(typeof(DrinkTeaPage),items);
                     break;
                 case "追茶":
                     this.Frame.Navigate(typeof(FollowTeaPage));

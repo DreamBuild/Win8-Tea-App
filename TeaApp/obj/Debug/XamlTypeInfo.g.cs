@@ -124,7 +124,7 @@ namespace TeaApp.TeaApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[18];
+            _typeNameTable = new string[19];
             _typeNameTable[0] = "TeaApp.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -143,8 +143,9 @@ namespace TeaApp.TeaApp_XamlTypeInfo
             _typeNameTable[15] = "Windows.UI.Xaml.Controls.RichTextBlock";
             _typeNameTable[16] = "Windows.UI.Xaml.DataTemplate";
             _typeNameTable[17] = "TeaApp.Views.TasteTeaPage";
+            _typeNameTable[18] = "TeaApp.Views.TeaHistoryPage";
 
-            _typeTable = new global::System.Type[18];
+            _typeTable = new global::System.Type[19];
             _typeTable[0] = typeof(global::TeaApp.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -163,6 +164,7 @@ namespace TeaApp.TeaApp_XamlTypeInfo
             _typeTable[15] = typeof(global::Windows.UI.Xaml.Controls.RichTextBlock);
             _typeTable[16] = typeof(global::Windows.UI.Xaml.DataTemplate);
             _typeTable[17] = typeof(global::TeaApp.Views.TasteTeaPage);
+            _typeTable[18] = typeof(global::TeaApp.Views.TeaHistoryPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -206,6 +208,7 @@ namespace TeaApp.TeaApp_XamlTypeInfo
         private object Activate_12_DrinkTeaPage() { return new global::TeaApp.Views.DrinkTeaPage(); }
         private object Activate_13_RichTextColumns() { return new global::TeaApp.Common.RichTextColumns(); }
         private object Activate_17_TasteTeaPage() { return new global::TeaApp.Views.TasteTeaPage(); }
+        private object Activate_18_TeaHistoryPage() { return new global::TeaApp.Views.TeaHistoryPage(); }
         private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -333,6 +336,14 @@ namespace TeaApp.TeaApp_XamlTypeInfo
                 userType.AddMemberName("NavigationHelper");
                 xamlType = userType;
                 break;
+
+            case 18:   //  TeaApp.Views.TeaHistoryPage
+                userType = new global::TeaApp.TeaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_18_TeaHistoryPage;
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("NavigationHelper");
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
@@ -426,6 +437,16 @@ namespace TeaApp.TeaApp_XamlTypeInfo
         private object get_15_TasteTeaPage_NavigationHelper(object instance)
         {
             var that = (global::TeaApp.Views.TasteTeaPage)instance;
+            return that.NavigationHelper;
+        }
+        private object get_16_TeaHistoryPage_DefaultViewModel(object instance)
+        {
+            var that = (global::TeaApp.Views.TeaHistoryPage)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_17_TeaHistoryPage_NavigationHelper(object instance)
+        {
+            var that = (global::TeaApp.Views.TeaHistoryPage)instance;
             return that.NavigationHelper;
         }
 
@@ -532,6 +553,18 @@ namespace TeaApp.TeaApp_XamlTypeInfo
                 userType = (global::TeaApp.TeaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TeaApp.Views.TasteTeaPage");
                 xamlMember = new global::TeaApp.TeaApp_XamlTypeInfo.XamlMember(this, "NavigationHelper", "TeaApp.Common.NavigationHelper");
                 xamlMember.Getter = get_15_TasteTeaPage_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "TeaApp.Views.TeaHistoryPage.DefaultViewModel":
+                userType = (global::TeaApp.TeaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TeaApp.Views.TeaHistoryPage");
+                xamlMember = new global::TeaApp.TeaApp_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "TeaApp.Common.ObservableDictionary");
+                xamlMember.Getter = get_16_TeaHistoryPage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "TeaApp.Views.TeaHistoryPage.NavigationHelper":
+                userType = (global::TeaApp.TeaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TeaApp.Views.TeaHistoryPage");
+                xamlMember = new global::TeaApp.TeaApp_XamlTypeInfo.XamlMember(this, "NavigationHelper", "TeaApp.Common.NavigationHelper");
+                xamlMember.Getter = get_17_TeaHistoryPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }

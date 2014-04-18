@@ -146,6 +146,9 @@
     <Compile Include="Views\TasteTeaPage.xaml.cs">
       <DependentUpon>TasteTeaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeaHistoryPage.xaml.cs">
+      <DependentUpon>TeaHistoryPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -177,6 +180,7 @@
     <Content Include="Data\FollowTea\茶的传播\国内.html" />
     <Content Include="Data\FollowTea\茶的传播\国外.html" />
     <Content Include="Data\FollowTea\茶的传播\简介.html" />
+    <Content Include="Images\drinktea\icon.png" />
     <Content Include="Images\followtea\main1.jpg" />
     <Content Include="Images\followtea\main2.jpg" />
     <Content Include="Images\followtea\main3.jpg" />
@@ -262,6 +266,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TasteTeaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeaHistoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
