@@ -30,7 +30,7 @@
         </Run>
         <LineBreak/>
         <InlineUIContainer>
-            <Image x:Name="interview" Source="ms-appx:///Images/followtea/main2.jpg"></Image>
+            <Image x:Name="interview" Source="ms-appx:///Images/taste/mian.jpg"></Image>
         </InlineUIContainer>
     </Paragraph>
   

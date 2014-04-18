@@ -192,6 +192,11 @@
     <Content Include="Images\followtea\main3.jpg" />
     <Content Include="Images\interacttea\pin.png" />
     <Content Include="Images\map.png" />
+    <Content Include="Images\taste\dian1.jpg" />
+    <Content Include="Images\taste\mian.jpg" />
+    <Content Include="Images\taste\pao1.jpg" />
+    <Content Include="Images\taste\tang1.jpg" />
+    <Content Include="Images\taste\tang2.jpg" />
     <Content Include="Resources\Bootstrap\css\bootstrap.min.css" />
     <Content Include="Resources\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Resources\css\extend.css" />
