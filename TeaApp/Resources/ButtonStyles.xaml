@@ -77,20 +77,21 @@
                                 <VisualState x:Name="Normal"/>
                                 <VisualState x:Name="PointerOver">
                                     <Storyboard>
-                                        <ColorAnimation Duration="0:0:1" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="Blue" Storyboard.TargetName="ArcShape"/>
+                                        <ColorAnimation Duration="0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="#0F7FC2" Storyboard.TargetName="ArcShape"/>
                                         <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="ArcShape">
                                             <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{ThemeResource ButtonPointerOverBackgroundThemeBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>-->
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
-                                            <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{ThemeResource ButtonPointerOverForegroundThemeBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPointerOverForegroundThemeBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Pressed">
-                                    <Storyboard>                                      
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="ArcShape">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedBackgroundThemeBrush}"/>
-                                        </ObjectAnimationUsingKeyFrames>
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="Gray" Storyboard.TargetName="ArcShape"/>
+                                        <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="ArcShape">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Gray"/>
+                                        </ObjectAnimationUsingKeyFrames>-->
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
@@ -111,12 +112,14 @@
                                 </VisualState>
                             </VisualStateGroup>
                             <VisualStateGroup x:Name="FocusStates">
-                                <VisualState x:Name="Focused">
-                                    <!--<Storyboard>
-                                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
-                                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+                                <VisualState x:Name="Focused" />
+                                <!--<Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusArcShape">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                                        </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>-->
-                                </VisualState>
+
+
                                 <VisualState x:Name="Unfocused"/>
                                 <VisualState x:Name="PointerFocused"/>
                             </VisualStateGroup>
@@ -133,12 +136,12 @@
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                           Margin="{TemplateBinding Padding}" 
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        
+
     </Style>
+    
 
 </ResourceDictionary>

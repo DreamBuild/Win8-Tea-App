@@ -38,14 +38,14 @@
 
             </Button>
 
-            <Button Canvas.Left="852" Canvas.Top="34" Background="AliceBlue" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Button Canvas.Left="851" Canvas.Top="34" Background="#FF4A818D" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <Button.RenderTransform>
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="60"/>
                 </Button.RenderTransform>
 
             </Button>
 
-            <Button Canvas.Left="1003" Canvas.Top="354" Content="茶地" FontSize="{StaticResource Fontsize}" Background="Beige" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <!--<Button Canvas.Left="1001" Canvas.Top="354" Content="茶地" FontSize="{StaticResource Fontsize}" Background="#FFBDBD63" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <Button.RenderTransform>
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="120"/>
                 </Button.RenderTransform>
@@ -64,7 +64,7 @@
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="240"/>
                 </Button.RenderTransform>
 
-            </Button>
+            </Button>-->
 
             <Button Canvas.Left="299" Canvas.Top="295" Background="Chartreuse" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <Button.RenderTransform>
