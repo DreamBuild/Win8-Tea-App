@@ -187,7 +187,6 @@
     <Content Include="Images\drinktea\main.png" />
     <Content Include="Images\drinktea\set.png" />
     <Content Include="Images\drinktea\water.png" />
-    <Content Include="Images\followtea\followtearoad.png" />
     <Content Include="Images\followtea\main1.jpg" />
     <Content Include="Images\followtea\main2.jpg" />
     <Content Include="Images\followtea\main3.jpg" />
