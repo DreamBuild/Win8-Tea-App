@@ -134,8 +134,11 @@
     <Compile Include="Views\FollowTeaPage.xaml.cs">
       <DependentUpon>FollowTeaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\InteractTeaPage.xaml.cs">
-      <DependentUpon>InteractTeaPage.xaml</DependentUpon>
+    <Compile Include="Views\TalkTeaPage.xaml.cs">
+      <DependentUpon>TalkTeaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeaPlacePage.xaml.cs">
+      <DependentUpon>TeaPlacePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ItemDetailPage.xaml.cs">
       <DependentUpon>ItemDetailPage.xaml</DependentUpon>
@@ -270,7 +273,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\InteractTeaPage.xaml">
+    <Page Include="Views\TalkTeaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeaPlacePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

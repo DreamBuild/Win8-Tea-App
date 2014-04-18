@@ -81,7 +81,7 @@ namespace TeaApp
                     this.Frame.Navigate(typeof(TasteTeaPage));
                     break;
                 case "说茶":
-                    this.Frame.Navigate(typeof(InteractTeaPage));
+                    this.Frame.Navigate(typeof(TalkTeaPage));
                     break;
                 case "聊天室":
                     this.Frame.Navigate(typeof(ChatRoomPage));
