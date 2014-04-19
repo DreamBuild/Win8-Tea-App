@@ -121,6 +121,10 @@ namespace TeaApp.Views
                     {
                         this.Frame.Navigate(typeof(TeaHistoryPage), model);
                     }
+                    else if(model.Title.Contains("传播"))
+                    {
+                        this.Frame.Navigate(typeof(TeaSpreadPage), model);
+                    }
                     else
                     { 
                         this.Frame.Navigate(typeof(ItemDetailPage), model);
