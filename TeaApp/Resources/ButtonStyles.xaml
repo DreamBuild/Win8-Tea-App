@@ -51,7 +51,7 @@
                                     <ScaleTransform  CenterY="1"/>
                                 </Image.RenderTransform>
                             </Image>
-                            <TextBlock Foreground="OrangeRed"  FontSize="16" Grid.Row="1" Text="{TemplateBinding Content}" TextAlignment="Center"/>
+                            <TextBlock Foreground="White"  FontSize="16" Grid.Row="1" Text="{TemplateBinding Content}" TextAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
