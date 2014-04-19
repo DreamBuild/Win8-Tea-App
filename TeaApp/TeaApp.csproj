@@ -217,7 +217,7 @@
     <Content Include="Images\followtea\main1.jpg" />
     <Content Include="Images\followtea\main2.jpg" />
     <Content Include="Images\followtea\main3.jpg" />
-    <Content Include="Images\interacttea\custom\teacustom.jpg" />
+    <Content Include="Images\interacttea\custom\teacustom.png" />
     <Content Include="Images\interacttea\leaf\tealeafback.png" />
     <Content Include="Images\interacttea\main\shuo1.png" />
     <Content Include="Images\interacttea\main\shuo2.png" />
