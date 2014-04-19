@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StoreAssociation xmlns="http://schemas.microsoft.com/appx/2010/storeassociation">
-  <Publisher>CN=7934748E-9CB7-47ED-B316-73DB7F563BEC</Publisher>
-  <NamespacePrefix>25359weiyangeve</NamespacePrefix>
-  <PublisherDisplayName>weiyang_eve</PublisherDisplayName>
+  <Publisher>CN=3F76B969-1F8E-4832-9B7F-4C75FBE3BC2B</Publisher>
+  <NamespacePrefix>54308NextDream</NamespacePrefix>
+  <PublisherDisplayName>Next Dream</PublisherDisplayName>
   <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
   <SupportedLocales>
     <Language Code="af" InMinimumRequirementSet="false" />
@@ -349,11 +349,11 @@
     <Language Code="zu-za" InMinimumRequirementSet="false" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>25359weiyangeve.teastory</MainPackageIdentityName>
+    <MainPackageIdentityName>54308NextDream.138258A711731</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>teastory</ReservedName>
+      <ReservedName>茶</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames />
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/3c7eb678-1452-44d4-b583-48a9ef03054f" />
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/744051d4-e331-464a-b606-1dc122823daf" />
 </StoreAssociation>

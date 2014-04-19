@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="25359weiyangeve.teastory" Publisher="CN=7934748E-9CB7-47ED-B316-73DB7F563BEC" Version="1.1.0.0" />
+  <Identity Name="54308NextDream.138258A711731" Publisher="CN=3F76B969-1F8E-4832-9B7F-4C75FBE3BC2B" Version="1.1.0.0" />
   <Properties>
-    <DisplayName>teastory</DisplayName>
-    <PublisherDisplayName>weiyang_eve</PublisherDisplayName>
+    <DisplayName>茶</DisplayName>
+    <PublisherDisplayName>Next Dream</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -15,14 +15,11 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TeaApp.App">
-      <m2:VisualElements DisplayName="teastory" Square150x150Logo="Assets\Square150x150Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="TeaApp" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
+      <m2:VisualElements DisplayName="茶" Square150x150Logo="Assets\Square150x150Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="茶，一片茶叶的故事。在不完美的生活中感知完美，哪怕只有一盏茶的时间，跟随一枚茶叶的旅程，感知一种文化的芬芳。" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
         <m2:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" DefaultSize="square150x150Logo">
         </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
     </Application>
   </Applications>
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>
