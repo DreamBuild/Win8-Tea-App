@@ -13,7 +13,7 @@
     <Page.Resources>
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">说茶</x:String>
-        
+
         <x:Double x:Key="Fontsize">50</x:Double>
     </Page.Resources>
 
@@ -34,7 +34,7 @@
         </Grid.RowDefinitions>
 
         <Canvas Grid.Row="1" Margin="0">
-            <Button Canvas.Left="500" Canvas.Top="5" Background="Yellow" FontSize="{StaticResource Fontsize}" Content="茶叶" Style="{StaticResource ArcButtonStyle}" >
+            <Button Canvas.Left="500" Canvas.Top="5" Background="Yellow" FontSize="{StaticResource Fontsize}" Click="TeaPlaceButton_Click" Content="茶地" Style="{StaticResource ArcButtonStyle}" >
 
             </Button>
 
@@ -72,6 +72,7 @@
                 </Button.RenderTransform>
 
             </Button>
+            <Image Height="278" Canvas.Left="908"  Source="ms-appx:///Images/interacttea/shuo.png" Stretch="Fill" Canvas.Top="301" Width="404"/>
         </Canvas>
         <!-- Back button and page title -->
         <Grid>

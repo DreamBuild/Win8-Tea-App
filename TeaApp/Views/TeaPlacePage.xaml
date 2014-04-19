@@ -1,6 +1,6 @@
 ﻿<Page
     x:Name="pageRoot"
-    x:Class="TeaApp.Views.InteractTeaPage"
+    x:Class="TeaApp.Views.TeaPlacePage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -16,24 +16,25 @@
         <Style x:Key="ToolTipStyle" TargetType="ToolTip">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="BorderBrush" Value="{x:Null}"/>
-            <Setter Property="HorizontalOffset" Value="200"/>
-            <Setter Property="VerticalOffset" Value="200"/>
+            <Setter Property="HorizontalOffset" Value="0"/>
+            <Setter Property="VerticalOffset" Value="100"/>
             <Setter Property="IsHoldingEnabled" Value="True"/>
-            
+            <Setter Property="Placement" Value="Top"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToolTip">
-                        <Grid Background="{x:Null}" Margin="100">
-                            <Ellipse Width="150" Height="100" Fill="#FF00B8AF" Stroke="#FF008CC1">
-                            </Ellipse>
+                        <Grid>
+                            <Path Data="M -100,50  L-100,-50 L100,-50 L100,50 L20,50 L-20,60 L0,50 Z" Fill="LightGray" Stroke="Gray"/>
+                            <!--<Ellipse Width="150" Height="100" Fill="#FF00B8AF" Stroke="#FF008CC1">
+                            </Ellipse>-->
                             <TextBlock Text="{TemplateBinding Content}" FontSize="23" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-        
-       
+
+
     </Page.Resources>
 
     <!--
@@ -56,10 +57,10 @@
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/map.png"/>
             </Canvas.Background>
             <Button Style="{StaticResource ProvinceButtonStyle}" Content="新疆" Canvas.Left="100" Canvas.Top="95" BorderBrush="{x:Null}" Height="142" Width="116" >
-                
-                <ToolTipService.ToolTip>
+
+                <!--<ToolTipService.ToolTip>
                     <ToolTip Style="{StaticResource ToolTipStyle}" Content="茶叶介绍"/>
-                </ToolTipService.ToolTip>
+                </ToolTipService.ToolTip>-->
             </Button>
 
         </Canvas>
