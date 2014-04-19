@@ -138,6 +138,9 @@
     <Compile Include="Views\TalkTeaPage.xaml.cs">
       <DependentUpon>TalkTeaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeaLeafPage.xaml.cs">
+      <DependentUpon>TeaLeafPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TeaPlacePage.xaml.cs">
       <DependentUpon>TeaPlacePage.xaml</DependentUpon>
     </Compile>
@@ -188,6 +191,7 @@
     <Content Include="Data\FollowTea\茶的传播\国内.html" />
     <Content Include="Data\FollowTea\茶的传播\国外.html" />
     <Content Include="Data\FollowTea\茶的传播\简介.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\GreenTea.html" />
     <Content Include="Images\drinktea\black.png" />
     <Content Include="Images\drinktea\drinkback.png" />
     <Content Include="Images\drinktea\drinkback2.png" />
@@ -288,6 +292,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TalkTeaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeaLeafPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
