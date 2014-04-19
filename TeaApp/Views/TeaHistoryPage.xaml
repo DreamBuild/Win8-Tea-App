@@ -57,7 +57,7 @@
                        Loaded="itemsList_Loaded"/>
             </StackPanel>
             <WebView Name="webView" Grid.Column="2" Margin="10" DefaultBackgroundColor="Transparent"/>
-
+            <!--<Image  Grid.Column="1"/>-->
         </Grid>
 
 

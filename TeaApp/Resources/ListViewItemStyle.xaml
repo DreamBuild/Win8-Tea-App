@@ -379,6 +379,7 @@
                                         <VisualStateGroup x:Name="FocusStates">
                                             <VisualState x:Name="Focused">
                                                 <Storyboard>
+                                                    <ColorAnimation Duration="0" Storyboard.TargetName="Circle" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" To="Blue"/>
                                                     <!--<DoubleAnimation Duration="0" Storyboard.TargetName="CircleSelected" Storyboard.TargetProperty="Opacity" To="1"/>-->
                                                 </Storyboard>
                                             </VisualState>
@@ -412,6 +413,7 @@
                                             </VisualState>
                                             <VisualState x:Name="Selected">
                                                 <Storyboard>
+                                                    <ColorAnimation Duration="0" Storyboard.TargetName="Circle" Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)" To="Blue"/>
                                                     <!--<DoubleAnimation Duration="0" Storyboard.TargetName="CircleSelected" Storyboard.TargetProperty="Opacity" To="1"/>-->
                                                 </Storyboard>
                                             </VisualState>
