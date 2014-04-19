@@ -124,7 +124,7 @@
                                 <VisualState x:Name="PointerFocused"/>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Path x:Name="ArcShape" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" Data="M 48.30,12.94 L 289.78,77.65 A 300,300 60 0 1 77.65,289.78 L 12.94,48.30 A 50,50 60 0,0 48.30,12.94">
+                        <Path x:Name="ArcShape" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" Data="M 48.30,12.94 L 289.78,77.65 A 300,300 60 0 1 77.65,289.78 L 12.94,48.30 A 50,50 60 0,0 48.30,12.94 M259.81 150 L43.30,25 M150,259.81 L25,43.30 M35.36,35.36 L212.13,212.13">
                             <Path.RenderTransform>
                                 <CompositeTransform Rotation="-135" TranslateX="150" TranslateY="320"/>
                             </Path.RenderTransform>
