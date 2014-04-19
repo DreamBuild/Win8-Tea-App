@@ -44,14 +44,11 @@
                     <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/followtea/followtearoad.png"/>
                 </Rectangle.Fill>
             </Rectangle>
-            <ListView  SelectionChanged="ListView_SelectionChanged" SelectionMode="Single" Style="{StaticResource HorizontalListView}"
-                       ItemsSource="{Binding Items}"
+            <ListView  SelectionChanged="ListView_SelectionChanged" SelectionMode="Single" 
+                       ItemsSource="{Binding Items}" ItemContainerStyle="{StaticResource CenterListViewItem}"
                        DisplayMemberPath="Name" Name="itemsList" Grid.Column="0" HorizontalAlignment="Center" 
-                       MinWidth="200" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,30,0"
+                       MinWidth="200" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,60,30,0"
                        Foreground="White"  Loaded="itemsList_Loaded">
-                <ListView.Background>
-                    <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/followtea/followtearoad.png"/>
-                </ListView.Background>
             </ListView>
 
             <!--<RichEditBox IsReadOnly="True" Padding="0,0,10,0" Name="DescriptionBox" FontSize="20" Grid.Column="1" TextAlignment="Left" TextWrapping="Wrap" Margin="0,0,100,10" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Auto">

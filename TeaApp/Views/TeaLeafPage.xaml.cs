@@ -65,9 +65,9 @@ namespace TeaApp.Views
         /// <see cref="Frame.Navigate(Type, Object)"/> 的导航参数，又提供
         /// 此页在以前会话期间保留的状态的
         /// 的字典。 首次访问页面时，该状态将为 null。</param>
-        private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            List<TeaLeafItem> items = await new TeaLeafDataSource().GetItems();
+            List<TeaLeafItem> items = e.NavigationParameter as List<TeaLeafItem>;
 
             if(items != null)
             {

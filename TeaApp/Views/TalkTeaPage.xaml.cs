@@ -109,10 +109,11 @@ namespace TeaApp.Views
             this.Frame.Navigate(typeof(TeaPlacePage));
         }
 
-        private void TeaLeafBtn_Click(object sender, RoutedEventArgs e)
+        private async void TeaLeafBtn_Click(object sender, RoutedEventArgs e)
         {
-            
-            this.Frame.Navigate(typeof(TeaLeafPage));
+            List<TeaLeafItem> items = await new TeaLeafDataSource().GetItems();
+
+            this.Frame.Navigate(typeof(TeaLeafPage),items);
         }
 
         private void TeaCustomBtn_Click(object sender, RoutedEventArgs e)
