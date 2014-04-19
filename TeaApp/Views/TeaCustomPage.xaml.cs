@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using TeaApp.DataModel;
 
 // “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
 
@@ -22,7 +21,7 @@ namespace TeaApp.Views
     /// <summary>
     /// 基本页，提供大多数应用程序通用的特性。
     /// </summary>
-    public sealed partial class TeaHistoryPage : Page
+    public sealed partial class TeaCustomPage : Page
     {
 
         private NavigationHelper navigationHelper;
@@ -46,7 +45,7 @@ namespace TeaApp.Views
         }
 
 
-        public TeaHistoryPage()
+        public TeaCustomPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
@@ -67,12 +66,6 @@ namespace TeaApp.Views
         /// 的字典。 首次访问页面时，该状态将为 null。</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            ItemDetailViewModel model = e.NavigationParameter as ItemDetailViewModel;
-
-            if(model != null)
-            { 
-                this.DefaultViewModel["Items"] = model.Items;
-            }
         }
 
         /// <summary>
@@ -109,23 +102,5 @@ namespace TeaApp.Views
         }
 
         #endregion
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.AddedItems.Count != 0)
-            {
-                DetailItem item = e.AddedItems[0] as DetailItem;
-
-                if (item != null && item.Content.EndsWith(".html"))
-                {
-                    webView.Navigate(new Uri(new Uri("ms-appx-web:///"), item.Content));
-                }
-            }
-        }
-
-        private void itemsList_Loaded(object sender, RoutedEventArgs e)
-        {
-            itemsList.SelectedIndex = 0;
-        }
     }
 }

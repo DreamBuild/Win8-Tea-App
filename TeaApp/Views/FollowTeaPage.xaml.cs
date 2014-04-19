@@ -117,7 +117,14 @@ namespace TeaApp.Views
 
                 if (item != null)
                 {
-                    this.Frame.Navigate(typeof(ItemDetailPage), model);
+                    if(model.Title.Contains("史"))
+                    {
+                        this.Frame.Navigate(typeof(TeaHistoryPage), model);
+                    }
+                    else
+                    { 
+                        this.Frame.Navigate(typeof(ItemDetailPage), model);
+                    }
                 }
             }
         }

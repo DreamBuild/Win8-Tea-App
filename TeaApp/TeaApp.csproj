@@ -139,6 +139,9 @@
     <Compile Include="Views\TalkTeaPage.xaml.cs">
       <DependentUpon>TalkTeaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeaCustomPage.xaml.cs">
+      <DependentUpon>TeaCustomPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TeaLeafPage.xaml.cs">
       <DependentUpon>TeaLeafPage.xaml</DependentUpon>
     </Compile>
@@ -228,6 +231,7 @@
     <Content Include="Images\taste\pao1.jpg" />
     <Content Include="Images\taste\tang1.jpg" />
     <Content Include="Images\taste\tang2.jpg" />
+    <Content Include="Images\teapark.jpg" />
     <Content Include="Resources\Bootstrap\css\bootstrap.min.css" />
     <Content Include="Resources\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Resources\css\extend.css" />
@@ -303,6 +307,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TalkTeaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeaCustomPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
