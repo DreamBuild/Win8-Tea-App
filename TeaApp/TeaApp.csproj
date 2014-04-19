@@ -192,7 +192,14 @@
     <Content Include="Data\FollowTea\茶的传播\国内.html" />
     <Content Include="Data\FollowTea\茶的传播\国外.html" />
     <Content Include="Data\FollowTea\茶的传播\简介.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\BirthPlaceOfTeas.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\BlackTea.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\CyanTea.html" />
     <Content Include="Data\TalkTea\TeaLeafs\GreenTea.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\LocalCustoms.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\RedTea.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\WhiteTea.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\YellowTea.html" />
     <Content Include="Images\drinktea\black.png" />
     <Content Include="Images\drinktea\drinkback.png" />
     <Content Include="Images\drinktea\drinkback2.png" />
