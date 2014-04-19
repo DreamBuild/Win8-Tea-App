@@ -22,7 +22,10 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/drinktea/drinkback.png"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -34,15 +37,15 @@
         </Grid.RowDefinitions>
 
         <Canvas Grid.Row="1" Margin="0">
-            <Button Canvas.Left="500" Canvas.Top="5" Background="Yellow" FontSize="{StaticResource Fontsize}" Click="TeaPlaceButton_Click" Content="茶地" Style="{StaticResource ArcButtonStyle}" >
+            <Button Canvas.Left="500" Canvas.Top="5" FontFamily="华文行楷" Background="LightCyan"  BorderBrush="Black" Foreground="Black" FontSize="{StaticResource Fontsize}" Click="TeaPlaceButton_Click" Content="茶地" Style="{StaticResource ArcButtonStyle}" >
 
             </Button>
 
-            <Button Canvas.Left="851" Canvas.Top="34" Background="#FF4A818D" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Button Canvas.Left="851" Canvas.Top="34" FontFamily="华文行楷" Background="#FFB2E4E6"  BorderBrush="Black"  Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <Button.RenderTransform>
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="60"/>
                 </Button.RenderTransform>
-
+               
             </Button>
 
             <!--<Button Canvas.Left="1001" Canvas.Top="354" Content="茶地" FontSize="{StaticResource Fontsize}" Background="#FFBDBD63" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
@@ -66,13 +69,12 @@
 
             </Button>-->
 
-            <Button Canvas.Left="299" Canvas.Top="295" Background="Chartreuse" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Button Canvas.Left="299" Canvas.Top="295" Background="#FFE1E9F0"  Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto" BorderBrush="Black">
                 <Button.RenderTransform>
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="300"/>
                 </Button.RenderTransform>
-
             </Button>
-            <Image Height="278" Canvas.Left="908"  Source="ms-appx:///Images/interacttea/shuo.png" Stretch="Fill" Canvas.Top="301" Width="404"/>
+            <Image Height="221" Canvas.Left="224" Canvas.Top="279" Width="512" Source="ms-appx:///Images/interacttea/main/shuo4.png"/>
         </Canvas>
         <!-- Back button and page title -->
         <Grid>
