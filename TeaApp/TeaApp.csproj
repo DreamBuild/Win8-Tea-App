@@ -191,6 +191,7 @@
     <Content Include="Data\FollowTea\茶的传播\国内.html" />
     <Content Include="Data\FollowTea\茶的传播\国外.html" />
     <Content Include="Data\FollowTea\茶的传播\简介.html" />
+    <Content Include="Data\TalkTea\TeaLeafs\GreenTea.html" />
     <Content Include="Images\drinktea\black.png" />
     <Content Include="Images\drinktea\drinkback.png" />
     <Content Include="Images\drinktea\drinkback2.png" />
