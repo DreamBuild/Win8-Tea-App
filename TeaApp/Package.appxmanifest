@@ -4,7 +4,7 @@
   <Properties>
     <DisplayName>TeaApp</DisplayName>
     <PublisherDisplayName>Allen</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.jpg</Logo>
+    <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.3.0</OSMinVersion>
@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TeaApp.App">
-      <m2:VisualElements DisplayName="TeaApp" Square150x150Logo="Assets\Logo.jpg" Square30x30Logo="Assets\small.jpg" Description="TeaApp" ForegroundText="light" BackgroundColor="#464646">
-        <m2:DefaultTile Wide310x150Logo="Assets\widelogo.jpg">
+      <m2:VisualElements DisplayName="TeaApp" Square150x150Logo="Assets\Square150x150Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="TeaApp" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" DefaultSize="square150x150Logo">
         </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
