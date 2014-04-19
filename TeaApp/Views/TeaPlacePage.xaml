@@ -43,7 +43,10 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/teapark.jpg"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -59,10 +62,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="630">
-                <Canvas.Background>
+                <!--<Canvas.Background>
                     <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/teapark.jpg"/>
-                </Canvas.Background>
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="安徽" Click="ProvinceBtn_Click" Canvas.Left="714" Canvas.Top="284" BorderBrush="{x:Null}" Width="95" Height="108" >
+                </Canvas.Background>-->
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="安徽" Click="ProvinceBtn_Click" Canvas.Left="561" Canvas.Top="151" BorderBrush="{x:Null}" Width="95" Height="108" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             祁门的祁红；休宁、歙县的屯绿，黄山的黄山毛峰、黄山银钩
@@ -70,21 +73,21 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="浙江" Click="ProvinceBtn_Click" Canvas.Left="791" Canvas.Top="338" BorderBrush="{x:Null}" Width="109" Height="111" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="浙江" Click="ProvinceBtn_Click" Canvas.Left="673" Canvas.Top="192" BorderBrush="{x:Null}" Width="109" Height="111" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             杭州的西湖龙井、莲芯、雀舌、莫干黄芽，天台的华顶云雾，嵊县的前岗白
                         </ToolTip>
                     </ToolTipService.ToolTip>
                 </Button>
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="江西" Click="ProvinceBtn_Click" Canvas.Left="699" Canvas.Top="381" BorderBrush="{x:Null}"  Width="76" Height="99" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="江西" Click="ProvinceBtn_Click" Canvas.Left="580" Canvas.Top="265" BorderBrush="{x:Null}"  Width="76" Height="99" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             庐山的庐山云雾，遂川的狗牯脑茶，婺源的眉、大鄣山云雾茶、珊厚香茶
                         </ToolTip>
                     </ToolTipService.ToolTip>
                 </Button>
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="江苏" Click="ProvinceBtn_Click" Canvas.Left="782" Canvas.Top="276" BorderBrush="{x:Null}"  Width="87" Height="101" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="江苏" Click="ProvinceBtn_Click" Canvas.Left="661" Canvas.Top="92" BorderBrush="{x:Null}"  Width="87" Height="101" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             宜兴的阳羡雪芽、荆溪云片，南京的雨花茶，无锡的二泉银毫
@@ -92,7 +95,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="湖北" Click="ProvinceBtn_Click" Canvas.Left="597" Canvas.Top="308" BorderBrush="{x:Null}"  Width="87" Height="101" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="湖北" Click="ProvinceBtn_Click" Canvas.Left="382" Canvas.Top="151" BorderBrush="{x:Null}"  Width="87" Height="101" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             恩族的玉露，宜昌的邓村绿茶、峡州碧峰、金岗银针，随州的车云山毛尖、棋盘山毛尖
@@ -100,7 +103,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="湖南" Click="ProvinceBtn_Click" Canvas.Left="617" Canvas.Top="383" BorderBrush="{x:Null}"  Width="87" Height="101" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="湖南" Click="ProvinceBtn_Click" Canvas.Left="449" Canvas.Top="264" BorderBrush="{x:Null}"  Width="87" Height="101" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             长沙的高桥银峰、湘波绿、河西园茶、东湖银毫、岳麓毛尖，郴县的五盖山米茶
@@ -108,7 +111,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="福建" Click="ProvinceBtn_Click" Canvas.Left="741" Canvas.Top="429" BorderBrush="{x:Null}"  Width="87" Height="101" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="福建" Click="ProvinceBtn_Click" Canvas.Left="787" Canvas.Top="223" BorderBrush="{x:Null}"  Width="87" Height="101" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             乌龙茶有崇安武夷山的武夷岩茶，包括武夷水仙、大红袍、肉桂等，安溪的铁观音
@@ -116,7 +119,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="云南" Click="ProvinceBtn_Click" Canvas.Left="557" Canvas.Top="446" BorderBrush="{x:Null}"  Width="87" Height="105" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="云南" Click="ProvinceBtn_Click" Canvas.Left="141" Canvas.Top="195" BorderBrush="{x:Null}"  Width="87" Height="105" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             凤庆、勐海的滇红工夫红茶、云南红碎茶。黑茶有西双版纳、思茅的普洱茶
@@ -124,7 +127,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="广东" Click="ProvinceBtn_Click" Canvas.Left="649" Canvas.Top="464" BorderBrush="{x:Null}"  Width="87" Height="105" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="广东" Click="ProvinceBtn_Click" Canvas.Left="251" Canvas.Top="243" BorderBrush="{x:Null}"  Width="87" Height="105" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             乌龙茶有潮州的凤凰单枞、凤凰乌龙、凤凰水仙，还有岭头单枞、石古坪乌龙、大叶奇兰
@@ -132,7 +135,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="海南" Click="ProvinceBtn_Click" Canvas.Left="597" Canvas.Top="531" BorderBrush="{x:Null}"  Width="87" Height="105" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="海南" Click="ProvinceBtn_Click" Canvas.Left="327" Canvas.Top="275" BorderBrush="{x:Null}"  Width="87" Height="105" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             南海、通什、岭头等的海南红茶。
@@ -140,7 +143,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="广西" Click="ProvinceBtn_Click" Canvas.Left="505" Canvas.Top="398" BorderBrush="{x:Null}"  Width="87" Height="105" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="广西" Click="ProvinceBtn_Click" Canvas.Left="263" Canvas.Top="126" BorderBrush="{x:Null}"  Width="87" Height="105" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             桂平的西山茶，横县的南山白毛茶，凌云的凌云白毫，贺县的开山白毫，昭平的象横云雾
@@ -148,7 +151,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="河南" Click="ProvinceBtn_Click" Canvas.Left="655" Canvas.Top="276" BorderBrush="{x:Null}"  Width="87" Height="105" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="河南" Click="ProvinceBtn_Click" Canvas.Left="474" Canvas.Top="95" BorderBrush="{x:Null}"  Width="87" Height="105" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             桂平的西山茶，横县的南山白毛茶，凌云的凌云白毫，贺县的开山白毫，昭平的象横云雾
@@ -156,7 +159,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
 
-                <Button Style="{StaticResource ProvinceButtonStyle}" Content="台湾" Click="ProvinceBtn_Click" Canvas.Left="804" Canvas.Top="440" BorderBrush="{x:Null}"  Width="87" Height="105" >
+                <Button Style="{StaticResource ProvinceButtonStyle}" Content="台湾" Click="ProvinceBtn_Click" Canvas.Left="873" Canvas.Top="275" BorderBrush="{x:Null}"  Width="87" Height="105" >
                     <ToolTipService.ToolTip>
                         <ToolTip Style="{StaticResource CustomToolTip}">
                             乌龙茶有南投的冻顶乌龙，台北、花莲的包种茶等。
@@ -164,7 +167,7 @@
                     </ToolTipService.ToolTip>
                 </Button>
             </Canvas>
-            <TextBlock Name="DescriptionBox" FontSize="20" Grid.Column="1" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,10,0" TextWrapping="Wrap"/>
+            <TextBox IsReadOnly="True" Name="DescriptionBox" FontSize="20" Grid.Column="1" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,10,0" TextWrapping="Wrap" Background="#B2494949" Foreground="White" BorderBrush="{x:Null}"/>
         </Grid>
         <!-- Back button and page title -->
         <Grid>
@@ -178,7 +181,7 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock  x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
     </Grid>

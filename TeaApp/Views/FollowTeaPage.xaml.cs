@@ -117,7 +117,7 @@ namespace TeaApp.Views
 
                 if (item != null)
                 {
-                    if(model.Title.Contains("史"))
+                    if(model.Title.Contains("简史"))
                     {
                         this.Frame.Navigate(typeof(TeaHistoryPage), model);
                     }
