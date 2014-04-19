@@ -14,7 +14,10 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>TeaApp_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>TeaApp_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>1A947F3B081DC4C26A4F9C45A8FDBD47E577F76F</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -235,6 +238,7 @@
     <Content Include="Images\taste\tang1.jpg" />
     <Content Include="Images\taste\tang2.jpg" />
     <Content Include="Images\teapark.jpg" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Resources\Bootstrap\css\bootstrap.min.css" />
     <Content Include="Resources\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Resources\css\extend.css" />
@@ -247,6 +251,7 @@
     <Content Include="Data\taste_tea_content.json" />
     <Content Include="Data\TalkTea\provinces.json" />
     <Content Include="Data\TalkTea\tealeafs.json" />
+    <None Include="TeaApp_StoreKey.pfx" />
     <None Include="TeaApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
