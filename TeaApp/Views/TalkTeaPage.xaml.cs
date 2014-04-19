@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TeaApp.DataModel;
 
 // “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
 
@@ -106,6 +107,12 @@ namespace TeaApp.Views
         private void TeaPlaceButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(TeaPlacePage));
+        }
+
+        private void TeaLeafBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+            this.Frame.Navigate(typeof(TeaLeafPage));
         }
     }
 }

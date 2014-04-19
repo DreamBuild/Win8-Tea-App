@@ -65,8 +65,14 @@ namespace TeaApp.Views
         /// <see cref="Frame.Navigate(Type, Object)"/> 的导航参数，又提供
         /// 此页在以前会话期间保留的状态的
         /// 的字典。 首次访问页面时，该状态将为 null。</param>
-        private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            List<TeaLeafItem> items = await new TeaLeafDataSource().GetItems();
+
+            if(items != null)
+            {
+                this.DefaultViewModel["Items"] = items;
+            }
         }
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TeaApp.Views
         ///的事件数据。</param>
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
+
         }
 
         #region NavigationHelper 注册
@@ -119,7 +126,10 @@ namespace TeaApp.Views
 
         private void itemsList_Loaded(object sender, RoutedEventArgs e)
         {
-            itemsList.SelectedIndex = 0;
+            if(itemsList.Items.Count > 0)
+            { 
+                itemsList.SelectedIndex = 0;
+            }
         }
     }
 }

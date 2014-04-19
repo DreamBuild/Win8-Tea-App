@@ -45,7 +45,7 @@
                 <Button.RenderTransform>
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="60"/>
                 </Button.RenderTransform>
-               
+
             </Button>
 
             <!--<Button Canvas.Left="1001" Canvas.Top="354" Content="茶地" FontSize="{StaticResource Fontsize}" Background="#FFBDBD63" Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
@@ -69,12 +69,12 @@
 
             </Button>-->
 
-            <Button Canvas.Left="299" Canvas.Top="295"  FontFamily="华文行楷" Foreground="Black" FontSize="{StaticResource Fontsize}" Content="茶叶" Background="#FFE1E9F0"  Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto" BorderBrush="Black">
+            <Button Canvas.Left="299" Canvas.Top="295" Click="TeaLeafBtn_Click"  FontFamily="华文行楷" Foreground="Black" FontSize="{StaticResource Fontsize}" Content="茶叶" Background="#FFE1E9F0"  Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto" BorderBrush="Black">
                 <Button.RenderTransform>
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="300"/>
                 </Button.RenderTransform>
             </Button>
-            <Image Height="221" Canvas.Left="224" Canvas.Top="279" Width="512" Source="ms-appx:///Images/interacttea/main/shuo4.png"/>
+            <Image Height="232" Canvas.Left="263" Canvas.Top="268" Width="452" Source="ms-appx:///Images/interacttea/main/shuo4.png"/>
         </Canvas>
         <!-- Back button and page title -->
         <Grid>

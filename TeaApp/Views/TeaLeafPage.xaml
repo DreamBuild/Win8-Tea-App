@@ -39,7 +39,7 @@
             
             <Image Grid.Column="0" Source="ms-appx:///Images/interacttea/leaf/tealeafback.png" Stretch="Fill"/>
 
-            <ListView Grid.Column="1"  SelectionChanged="ListView_SelectionChanged" SelectionMode="Single" ItemContainerStyle="{StaticResource ListViewStyle}"
+            <ListView Grid.Column="1"  SelectionChanged="ListView_SelectionChanged" SelectionMode="Single" ItemContainerStyle="{StaticResource CenterListViewItem}"
                        ItemsSource="{Binding Items}"
                        DisplayMemberPath="Name" Name="itemsList" HorizontalAlignment="Center" 
                        MinWidth="200" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,30,0"

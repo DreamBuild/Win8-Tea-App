@@ -20,7 +20,7 @@
                     <ControlTemplate TargetType="ToolTip">
                         <Grid>
                             <Path x:Name="Shape" Grid.Row="0" Opacity="1" Data="M0,0 L200,0 L200,70 L120,70 L100,80 L110,70 L0,70 Z" Fill="LightCyan" Stroke="Gray"/>
-                            <TextBlock Text="{TemplateBinding Content}" Foreground="Black" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" MaxWidth="190"/>
+                            <TextBlock Margin="5" FontSize="13" Text="{TemplateBinding Content}" Foreground="Black" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" MaxWidth="190"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
