@@ -159,7 +159,11 @@
     </AppxManifest>
     <Content Include="Assets\Logo.scale-100.jpg" />
     <Content Include="Assets\small.scale-100.jpg" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square30x30Logo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.jpg" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\widelogo.scale-100.jpg" />
     <Content Include="Data\DrinkTea\健康.html" />
     <Content Include="Data\DrinkTea\茶具.html" />
@@ -184,6 +188,8 @@
     <Content Include="Data\FollowTea\茶的传播\国外.html" />
     <Content Include="Data\FollowTea\茶的传播\简介.html" />
     <Content Include="Images\drinktea\black.png" />
+    <Content Include="Images\drinktea\drinkback.png" />
+    <Content Include="Images\drinktea\drinkback2.png" />
     <Content Include="Images\drinktea\flowertea.png" />
     <Content Include="Images\drinktea\greentea.png" />
     <Content Include="Images\drinktea\health.png" />
