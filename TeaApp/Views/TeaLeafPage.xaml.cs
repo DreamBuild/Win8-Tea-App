@@ -117,10 +117,10 @@ namespace TeaApp.Views
             {
                 TeaLeafItem item = e.AddedItems[0] as TeaLeafItem;
 
-                //if (item != null && item.Address.EndsWith(".html"))
-                //{
-                //    webView.Navigate(new Uri(new Uri("ms-appx-web:///"), item.Address));
-                //}
+                if (item != null && item.Address.EndsWith(".html"))
+                {
+                    webView.Navigate(new Uri(new Uri("ms-appx-web:///"), item.Address));
+                }
             }
         }
 
