@@ -168,6 +168,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\BadgeLogo.scale-180.png" />
     <Content Include="Assets\Logo.scale-100.jpg" />
     <Content Include="Assets\small.scale-100.jpg" />
     <Content Include="Assets\Square150x150Logo.scale-100.png" />
@@ -215,6 +216,7 @@
     <Content Include="Images\drinktea\main.png" />
     <Content Include="Images\drinktea\set.png" />
     <Content Include="Images\drinktea\water.png" />
+    <Content Include="Images\followtea\14.jpg" />
     <Content Include="Images\followtea\followtearoad.png" />
     <Content Include="Images\followtea\history1.png" />
     <Content Include="Images\followtea\history2.png" />
