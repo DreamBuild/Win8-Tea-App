@@ -108,12 +108,12 @@ namespace TeaApp.Views
         {
             if (e.AddedItems.Count != 0)
             {
-                DetailItem item = e.AddedItems[0] as DetailItem;
+                TeaLeafItem item = e.AddedItems[0] as TeaLeafItem;
 
-                if (item != null && item.Content.EndsWith(".html"))
-                {
-                    webView.Navigate(new Uri(new Uri("ms-appx-web:///"), item.Content));
-                }
+                //if (item != null && item.Address.EndsWith(".html"))
+                //{
+                //    webView.Navigate(new Uri(new Uri("ms-appx-web:///"), item.Address));
+                //}
             }
         }
 

@@ -10,6 +10,11 @@ namespace TeaApp.DataModel
 {
     public  class JsonArrayReader
     {
+        /// <summary>
+        /// 从Data文件夹下读取json数据
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <returns></returns>
         public static async Task<JsonArray> ReadArrayFromFile(String filename)
         {
             Uri dataUri = new Uri("ms-appx:///Data/" + filename);
