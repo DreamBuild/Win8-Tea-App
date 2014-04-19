@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="87bf6546-886f-4817-8b16-ecf87fa09500" Publisher="CN=Allen" Version="1.0.0.0" />
+  <Identity Name="25359weiyangeve.teastory" Publisher="CN=7934748E-9CB7-47ED-B316-73DB7F563BEC" Version="1.1.0.0" />
   <Properties>
-    <DisplayName>TeaApp</DisplayName>
-    <PublisherDisplayName>Allen</PublisherDisplayName>
+    <DisplayName>teastory</DisplayName>
+    <PublisherDisplayName>weiyang_eve</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TeaApp.App">
-      <m2:VisualElements DisplayName="TeaApp" Square150x150Logo="Assets\Square150x150Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="TeaApp" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
+      <m2:VisualElements DisplayName="teastory" Square150x150Logo="Assets\Square150x150Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="TeaApp" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
         <m2:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" DefaultSize="square150x150Logo">
         </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
