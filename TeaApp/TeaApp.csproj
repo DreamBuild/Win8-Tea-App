@@ -121,6 +121,7 @@
     <Compile Include="DataModel\TasteTeaDataSource.cs" />
     <Compile Include="DataModel\TeaFollowDataSource.cs" />
     <Compile Include="DataModel\TeaDrinkDataSource.cs" />
+    <Compile Include="DataModel\TeaPlaceDataSource.cs" />
     <Compile Include="DataModel\TeaTopicDataSource.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -217,6 +218,7 @@
     <Content Include="Resources\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Resources\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Data\taste_tea_content.json" />
+    <Content Include="Data\TalkTea\provinces.json" />
     <None Include="TeaApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

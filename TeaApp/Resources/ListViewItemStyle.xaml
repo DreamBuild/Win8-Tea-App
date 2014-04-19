@@ -344,7 +344,7 @@
                     <Setter Property="Margin" Value="0,0,0,0"/>
                     <Setter Property="HorizontalContentAlignment" Value="Left"/>
                     <Setter Property="VerticalContentAlignment" Value="Center"/>
-
+                    <Setter Property="FontSize" Value="25"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="ListViewItem">

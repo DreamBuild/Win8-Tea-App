@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TeaApp.DataModel;
 
 // “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
 
@@ -66,6 +67,9 @@ namespace TeaApp.Views
         /// 的字典。 首次访问页面时，该状态将为 null。</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            var item = new { Description = "新疆茶叶", Name = "新疆" };
+
+            this.DefaultViewModel["Item"] = item;
         }
 
         /// <summary>
@@ -102,5 +106,20 @@ namespace TeaApp.Views
         }
 
         #endregion
+
+        private async void ProvinceBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+
+            if(btn != null)
+            {
+                String province = btn.Content as String;
+
+                if(province != null)
+                {
+                    this.DescriptionBox.Text =await new TeaPlaceDataSource().GetProvinceContent(province);
+                }
+            }
+        }
     }
 }
