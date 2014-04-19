@@ -102,5 +102,10 @@ namespace TeaApp.Views
         }
 
         #endregion
+
+        private void TeaPlaceButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TeaPlacePage));
+        }
     }
 }

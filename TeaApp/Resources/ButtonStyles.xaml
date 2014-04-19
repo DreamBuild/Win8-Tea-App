@@ -5,6 +5,7 @@
 
     <Style x:Key="ProvinceButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="MinHeight" Value="300"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -14,6 +15,7 @@
                                 <VisualState x:Name="Normal"/>
                                 <VisualState x:Name="PointerOver">
                                     <Storyboard>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="Shape" Storyboard.TargetProperty="Opacity" To="1"/>
                                         <DoubleAnimation Duration="0" Storyboard.TargetName="Image" Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleY)" To="1.3"/>
                                     </Storyboard>
                                 </VisualState>
@@ -23,8 +25,6 @@
                                         <DoubleAnimation Duration="0" Storyboard.TargetName="Image" Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleY)" To="2"/>
                                     </Storyboard>
                                 </Storyboard>-->
-
-
                                 <!--<Storyboard>
                                         <ColorAnimation Duration="0" Storyboard.TargetName="Background" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FF6DBDD1"/>
                                         <DoubleAnimation Duration="0" Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="Opacity" To="1"/>
@@ -37,12 +37,14 @@
                             </VisualStateGroup>
                             <VisualStateGroup x:Name="FocusStates" />
                         </VisualStateManager.VisualStateGroups>
-                        <Grid x:Name="Container">
+                        <Grid x:Name="Container" >
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="80*"/>
+                                <RowDefinition Height="40*"/>
+                                <RowDefinition Height="40*"/>
                                 <RowDefinition Height="20*"/>
                             </Grid.RowDefinitions>
-                            <Image x:Name="Image" Source="ms-appx:///Images/interacttea/pin.png" Stretch="Fill" Grid.Row="0">
+                            <Path x:Name="Shape" Grid.Row="0" Opacity="0" Data="M0,0  L0,100 L200,100 L200,200 L120,200 L150,100 L130,0 Z" Fill="LightGray" Stroke="Gray"/>
+                            <Image Grid.Row="1" MinHeight="100" x:Name="Image" Source="ms-appx:///Images/interacttea/pin.png" Stretch="Fill">
                                 <Image.RenderTransformOrigin>
                                     0.5,1
                                 </Image.RenderTransformOrigin>
@@ -50,7 +52,7 @@
                                     <ScaleTransform  CenterY="1"/>
                                 </Image.RenderTransform>
                             </Image>
-                            <TextBlock Text="{TemplateBinding Content}" Grid.Row="1" TextAlignment="Center"/>
+                            <TextBlock  Grid.Row="2" Text="{TemplateBinding Content}" TextAlignment="Center"/>
                         </Grid>
                     </Grid>
                 </ControlTemplate>
@@ -142,6 +144,6 @@
         </Setter>
 
     </Style>
-    
+
 
 </ResourceDictionary>

@@ -21,7 +21,7 @@ namespace TeaApp.Views
     /// <summary>
     /// 基本页，提供大多数应用程序通用的特性。
     /// </summary>
-    public sealed partial class InteractTeaPage : Page
+    public sealed partial class TeaPlacePage : Page
     {
 
         private NavigationHelper navigationHelper;
@@ -45,7 +45,7 @@ namespace TeaApp.Views
         }
 
 
-        public InteractTeaPage()
+        public TeaPlacePage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
