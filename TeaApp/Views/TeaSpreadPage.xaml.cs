@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -14,27 +13,21 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TeaApp.DataModel;
+using TeaApp.Util;
+using Windows.Storage;
+using Windows.UI.Xaml.Documents;
 
-// “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
+// “项详细信息页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234232 上提供
 
-namespace TeaApp.Views
+namespace TeaApp
 {
     /// <summary>
-    /// 基本页，提供大多数应用程序通用的特性。
+    /// 显示组内某一项的详细信息的页面。
     /// </summary>
-    public sealed partial class TeaLeafPage : Page
+    public sealed partial class TeaSpreadPage : Page
     {
-
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-
-        /// <summary>
-        /// 可将其更改为强类型视图模型。
-        /// </summary>
-        public ObservableDictionary DefaultViewModel
-        {
-            get { return this.defaultViewModel; }
-        }
 
         /// <summary>
         /// NavigationHelper 在每页上用于协助导航和
@@ -45,17 +38,24 @@ namespace TeaApp.Views
             get { return this.navigationHelper; }
         }
 
+        /// <summary>
+        /// 可将其更改为强类型视图模型。
+        /// </summary>
+        public ObservableDictionary DefaultViewModel
+        {
+            get { return this.defaultViewModel; }
+        }
 
-        public TeaLeafPage()
+        public TeaSpreadPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
-            this.navigationHelper.SaveState += navigationHelper_SaveState;
+
         }
 
         /// <summary>
-        ///使用在导航过程中传递的内容填充页。 在从以前的会话
+        /// 使用在导航过程中传递的内容填充页。  在从以前的会话
         /// 重新创建页时，也会提供任何已保存状态。
         /// </summary>
         /// <param name="sender">
@@ -64,28 +64,13 @@ namespace TeaApp.Views
         /// <param name="e">事件数据，其中既提供在最初请求此页时传递给
         /// <see cref="Frame.Navigate(Type, Object)"/> 的导航参数，又提供
         /// 此页在以前会话期间保留的状态的
-        /// 的字典。 首次访问页面时，该状态将为 null。</param>
+        /// 字典。 首次访问页面时，该状态将为 null。</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            List<TeaLeafItem> items = e.NavigationParameter as List<TeaLeafItem>;
+            ItemDetailViewModel model = e.NavigationParameter as ItemDetailViewModel;
 
-            if(items != null)
-            {
-                this.DefaultViewModel["Items"] = items;
-            }
-        }
-
-        /// <summary>
-        /// 保留与此页关联的状态，以防挂起应用程序或
-        /// 从导航缓存中放弃此页。  值必须符合
-        /// <see cref="SuspensionManager.SessionState"/> 的序列化要求。
-        /// </summary>
-        ///<param name="sender">事件的来源；通常为 <see cref="NavigationHelper"/></param>
-        ///<param name="e">提供要使用可序列化状态填充的空字典
-        ///的事件数据。</param>
-        private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
-        {
-
+            this.DefaultViewModel["Items"] = model.Items;
+            this.DefaultViewModel["Title"] = model.Title;
         }
 
         #region NavigationHelper 注册
@@ -99,6 +84,7 @@ namespace TeaApp.Views
         /// 除了在会话期间保留的页面状态之外
         /// LoadState 方法中还提供导航参数。
 
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             navigationHelper.OnNavigatedTo(e);
@@ -111,25 +97,49 @@ namespace TeaApp.Views
 
         #endregion
 
+        //private /*async*/ void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        //{
+        //    DetailItem item = e.ClickedItem as DetailItem;
+
+        //    if(item != null)
+        //    {
+        //        webView.Navigate(new Uri(new Uri("ms-appx-web:///"),item.Content));
+        //    }
+            
+        //    //Windows.Storage.Streams.IRandomAccessStream randAccStream =
+        //    //await new TextContentUtil().GetRandomFile("Data/TasteTea/泡茶.rtf");
+
+        //    //this.DescriptionBox.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+
+        //    //DescriptionBox.Blocks.Clear();
+
+        //    //BlockCollectionResolver resolver = new BlockCollectionResolver();
+
+        //    //List<Paragraph> ps = await resolver.Resolver("TasteTea/煎茶.xaml");
+
+        //    //foreach (var item in ps)
+        //    //{
+        //    //    this.DescriptionBox.Blocks.Add(item);
+        //    //}
+
+        //}
+
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count != 0)
-            {
-                TeaLeafItem item = e.AddedItems[0] as TeaLeafItem;
+            if(e.AddedItems.Count != 0)
+            { 
+                DetailItem item = e.AddedItems[0] as DetailItem;
 
-                if (item != null && item.Address.EndsWith(".html"))
+                if (item != null && item.Content.EndsWith(".html"))
                 {
-                    webView.Navigate(new Uri(new Uri("ms-appx-web:///"), item.Address));
+                    webView.Navigate(new Uri(new Uri("ms-appx-web:///"), item.Content));
                 }
             }
         }
 
         private void itemsList_Loaded(object sender, RoutedEventArgs e)
         {
-            if(itemsList.Items.Count > 0)
-            { 
-                itemsList.SelectedIndex = 0;
-            }
+            itemsList.SelectedIndex = 0;
         }
     }
 }

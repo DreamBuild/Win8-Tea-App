@@ -66,6 +66,7 @@ namespace TeaApp.Views
         /// 的字典。 首次访问页面时，该状态将为 null。</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            this.webView.Navigate(new Uri(new Uri("ms-appx-web:///"), "Data/TalkTea/TeaLeafs/LocalCustoms.html"));
         }
 
         /// <summary>

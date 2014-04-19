@@ -41,7 +41,7 @@
 
             </Button>
 
-            <Button Canvas.Left="851" Canvas.Top="34"  FontFamily="华文行楷" Foreground="Black" FontSize="{StaticResource Fontsize}" Content="茶俗" Background="#FFB2E4E6"  BorderBrush="Black"  Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Button Canvas.Left="851" Canvas.Top="34" Click="TeaCustomBtn_Click"  FontFamily="华文行楷" Foreground="Black" FontSize="{StaticResource Fontsize}" Content="茶俗" Background="#FFB2E4E6"  BorderBrush="Black"  Style="{StaticResource ArcButtonStyle}" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <Button.RenderTransform>
                     <CompositeTransform CenterX="0" CenterY="0" Rotation="60"/>
                 </Button.RenderTransform>
