@@ -15,7 +15,14 @@
         * 第 0 行包含后退按钮和页标题
         * 第 1 行包含页布局的其余部分
     -->
-    <Grid Background="Black">
+    <Grid>
+        <!--<<Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/drinktea/drinkback2.png"/>-->
+        <!--</Grid.Background>-->
+        <Grid.Background>
+            
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/drinktea/drinkback2.png"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
