@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using TeaApp.Views;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI;
+using Windows.UI.ApplicationSettings;
 
 // “空白应用程序”模板在 http://go.microsoft.com/fwlink/?LinkId=234227 上有介绍
 
@@ -79,9 +71,22 @@ namespace TeaApp
                 // 参数
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
+
+            SettingsPane.GetForCurrentView().CommandsRequested += App_CommandsRequested;
+
             // 确保当前窗口处于活动状态
             Window.Current.Activate();
         }
+
+        void App_CommandsRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
+        {
+            var privacyPolocy = new SettingsCommand("privacyPolocyId", "隐私策略", (handler) =>
+            {
+                var IsSeccess = Windows.System.Launcher.LaunchUriAsync(new Uri("http://www.cnblogs.com/wzk89/articles/2718356.html"));
+            });
+            args.Request.ApplicationCommands.Add(privacyPolocy);
+        }
+
 
         /// <summary>
         ///导航到特定页失败时调用
